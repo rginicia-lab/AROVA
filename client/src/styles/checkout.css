@@ -1,0 +1,554 @@
+/* =========================================================
+   AROVA CHECKOUT
+   ========================================================= */
+
+.checkout-page {
+  min-height: calc(100vh - 80px);
+  padding: 45px 6% 70px;
+  background: #f7f7f5;
+  color: #111;
+}
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.checkout-page .back-button {
+  margin-bottom: 30px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.checkout-page .back-button:hover {
+  color: #308020;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.checkout-header {
+  padding-bottom: 35px;
+  border-bottom: 1px solid #deded9;
+}
+
+.checkout-header span {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #308020;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.checkout-header h1 {
+  margin: 0;
+
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.checkout-header p {
+  margin: 14px 0 0;
+
+  color: #777;
+  font-size: 15px;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 45px;
+
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.checkout-form {
+  padding: 32px;
+
+  background: #fff;
+  border: 1px solid #e1e1dc;
+  border-radius: 18px;
+}
+
+.checkout-form > h2,
+.payment-section h2 {
+  margin: 0 0 25px;
+
+  color: #111;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FIELDS
+   ========================================================= */
+
+.checkout-field {
+  margin-bottom: 20px;
+}
+
+.checkout-field label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.checkout-field input,
+.checkout-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  border: 1px solid #d8d8d3;
+  border-radius: 9px;
+
+  background: #fafaf8;
+  color: #111;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+  resize: vertical;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.checkout-field input::placeholder,
+.checkout-field textarea::placeholder {
+  color: #999;
+}
+
+.checkout-field input:hover,
+.checkout-field textarea:hover {
+  border-color: #bbb;
+}
+
+.checkout-field input:focus,
+.checkout-field textarea:focus {
+  border-color: #308020;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(48, 128, 32, 0.08);
+}
+
+/* =========================================================
+   TWO COLUMN FORM ROW
+   ========================================================= */
+
+.checkout-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* =========================================================
+   PAYMENT
+   ========================================================= */
+
+.payment-section {
+  margin-top: 30px;
+  padding-top: 25px;
+
+  border-top: 1px solid #e3e3de;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 12px;
+  padding: 15px;
+
+  border: 1px solid #deded9;
+  border-radius: 10px;
+
+  background: #fafaf8;
+
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.payment-option:hover {
+  border-color: #308020;
+}
+
+.payment-option input {
+  accent-color: #308020;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.checkout-error {
+  margin: 20px 0;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ffd1d1;
+  border-radius: 8px;
+
+  background: #fff3f3;
+  color: #c62828;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   PLACE ORDER
+   ========================================================= */
+
+.place-order-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #111;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.place-order-button:hover:not(:disabled) {
+  background: #308020;
+  transform: translateY(-1px);
+}
+
+.place-order-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.checkout-summary {
+  align-self: start;
+
+  position: sticky;
+  top: 100px;
+
+  padding: 28px;
+
+  background: #111;
+  color: #fff;
+
+  border-radius: 18px;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+.checkout-summary > h2 {
+  margin: 0 0 25px;
+
+  font-size: 20px;
+}
+
+/* =========================================================
+   CHECKOUT ITEMS
+   ========================================================= */
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  margin-bottom: 15px;
+
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.checkout-item strong {
+  flex-shrink: 0;
+
+  color: #fff;
+  font-size: 13px;
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.checkout-summary .summary-divider {
+  height: 1px;
+  margin: 22px 0;
+
+  background: #333;
+}
+
+/* =========================================================
+   COUPON
+   ========================================================= */
+
+.coupon-section h3 {
+  margin: 0 0 12px;
+
+  color: #fff;
+  font-size: 14px;
+}
+
+.coupon-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.coupon-input-row input {
+  min-width: 0;
+  flex: 1;
+
+  padding: 11px 12px;
+
+  border: 1px solid #3b3b3b;
+  border-radius: 8px;
+
+  background: #1a1a1a;
+  color: #fff;
+
+  font-size: 12px;
+  outline: none;
+}
+
+.coupon-input-row input:focus {
+  border-color: #308020;
+}
+
+.coupon-input-row button {
+  padding: 0 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #308020;
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.coupon-input-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.coupon-error,
+.coupon-success {
+  margin: 9px 0 0;
+
+  font-size: 11px;
+}
+
+.coupon-error {
+  color: #ff7777;
+}
+
+.coupon-success {
+  color: #7cff5b;
+}
+
+/* =========================================================
+   APPLIED COUPON
+   ========================================================= */
+
+.applied-coupon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px;
+
+  border: 1px solid #315f2b;
+  border-radius: 9px;
+
+  background: rgba(48, 128, 32, 0.12);
+}
+
+.applied-coupon div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.applied-coupon strong {
+  color: #7cff5b;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.applied-coupon span {
+  color: #aaa;
+  font-size: 11px;
+}
+
+.applied-coupon button {
+  border: none;
+  background: transparent;
+
+  color: #ff7777;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   SUMMARY ROWS
+   ========================================================= */
+
+.checkout-summary .summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
+
+  color: #aaa;
+  font-size: 13px;
+}
+
+.checkout-summary .summary-row strong {
+  color: #fff;
+}
+
+.checkout-summary .discount-row {
+  color: #7cff5b;
+}
+
+.checkout-summary .discount-row strong {
+  color: #7cff5b;
+}
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+.checkout-summary .summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-summary .summary-total span {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.checkout-summary .summary-total strong {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-summary {
+    position: static;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .checkout-page {
+    padding: 30px 18px 50px;
+  }
+
+  .checkout-header {
+    padding-bottom: 28px;
+  }
+
+  .checkout-header h1 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+  }
+
+  .checkout-header p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .checkout-content {
+    margin-top: 25px;
+    gap: 25px;
+  }
+
+  .checkout-form {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .checkout-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .checkout-summary {
+    padding: 23px 20px;
+    border-radius: 14px;
+  }
+
+  .coupon-input-row {
+    flex-direction: column;
+  }
+
+  .coupon-input-row button {
+    height: 42px;
+  }
+}

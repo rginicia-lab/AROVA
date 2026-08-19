@@ -1,0 +1,249 @@
+/* =========================================================
+   AROVA SHOP PAGE
+   ========================================================= */
+
+.shop-page {
+  min-height: calc(100vh - 80px);
+  padding: 50px 6%;
+  background: #f7f7f5;
+}
+
+
+/* =========================================================
+   SHOP HEADER
+   ========================================================= */
+
+.shop-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 10px 0 42px;
+  border-bottom: 1px solid #deded9;
+}
+
+.shop-header > div:first-child p {
+  margin: 0 0 12px;
+
+  color: #308020;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.shop-header h1 {
+  margin: 0;
+
+  color: #111111;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.shop-header span {
+  display: block;
+  margin-top: 10px;
+
+  color: #777777;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.shop-search {
+  width: 360px;
+}
+
+.shop-search input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 15px 18px;
+
+  border: 1px solid #d8d8d3;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-size: 14px;
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.shop-search input::placeholder {
+  color: #999999;
+}
+
+.shop-search input:hover {
+  border-color: #bbbbbb;
+}
+
+.shop-search input:focus {
+  border-color: #308020;
+  box-shadow: 0 0 0 3px rgba(48, 128, 32, 0.08);
+}
+
+
+/* =========================================================
+   CONTROLS
+   ========================================================= */
+
+.shop-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 25px 0;
+}
+
+.shop-controls select {
+  min-width: 190px;
+
+  padding: 12px 38px 12px 14px;
+
+  border: 1px solid #d8d8d3;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #222222;
+
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.shop-controls select:hover {
+  border-color: #aaaaaa;
+}
+
+.shop-controls select:focus {
+  border-color: #308020;
+}
+
+
+/* =========================================================
+   RESULTS
+   ========================================================= */
+
+.shop-results {
+  margin-top: 5px;
+}
+
+.shop-results > p {
+  margin: 0 0 22px;
+
+  color: #777777;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.shop-error {
+  margin: 10px 0 25px;
+
+  padding: 14px 16px;
+
+  border: 1px solid #ffd4d4;
+  border-radius: 9px;
+
+  background: #fff2f2;
+  color: #c62828;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PRODUCT GRID SUPPORT
+   ========================================================= */
+
+.shop-results .product-grid {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .shop-page {
+    padding: 40px 4%;
+  }
+
+  .shop-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .shop-search {
+    width: 100%;
+  }
+
+  .shop-controls {
+    justify-content: flex-start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .shop-page {
+    padding: 30px 18px;
+  }
+
+  .shop-header {
+    padding-bottom: 30px;
+    gap: 25px;
+  }
+
+  .shop-header h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .shop-header span {
+    font-size: 17px;
+  }
+
+  .shop-search {
+    width: 100%;
+  }
+
+  .shop-search input {
+    padding: 14px;
+  }
+
+  .shop-controls {
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 20px 0;
+  }
+
+  .shop-controls select {
+    width: 100%;
+  }
+
+  .shop-results > p {
+    margin-bottom: 18px;
+  }
+}
