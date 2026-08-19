@@ -45,7 +45,11 @@ app.use(helmet());
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "https://arova-cb0cl96y7-abcd-cbef.vercel.app",
+    ],
     credentials: true,
   })
 );
